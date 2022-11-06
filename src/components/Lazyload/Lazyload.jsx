@@ -55,7 +55,7 @@ const Lazyload = () => {
                 dataLength={data.length}
                 next={fetchMoreData}
                 hasMore={data.length < totalLength}
-                loader={<h4>Loading...</h4>}
+                loader={<h4 className='text-center'>Loading...</h4>}
             >
                 <div className="container d-flex flex-wrap mt-4 justify-content-center mb-3">
                     {data.map((val, id) => {
