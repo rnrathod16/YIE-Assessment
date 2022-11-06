@@ -1,0 +1,7 @@
+.custom-select:focus {
+    box-shadow: none;
+}
+
+.custom-select {
+    border: none;
+}
