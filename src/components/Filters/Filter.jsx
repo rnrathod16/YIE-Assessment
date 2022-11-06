@@ -54,7 +54,7 @@ const Filter = () => {
     useEffect(() => {
         fetchData();
         // eslint-disable-next-line
-    }, [url, query])
+    }, [url])
 
 
     return (
