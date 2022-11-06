@@ -11,7 +11,7 @@ const Lazyload = () => {
 
 
     const fetchData = async () => {
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${7 * page}&limit=6`);
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${6 * page}&limit=7`);
         const result = await res.json();
         getPokemon(result.results);
     }
@@ -29,7 +29,7 @@ const Lazyload = () => {
 
     const fetchMoreData = async () => {
         setPage(page + 1);
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${7 * page}&limit=6`);
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${6 * page}&limit=7`);
         const result = await res.json();
         const pokdata = result.results;
 
