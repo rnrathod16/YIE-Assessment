@@ -23,6 +23,10 @@ const Filter = () => {
         const res = await fetch(url);
         const result = await res.json();
         getPokemon(result.results);
+
+    }
+
+    const s = () => {
         setuSearchData([
             ...new Map(searchdata.map((item) => [item["name"], item])).values(),
         ]);
@@ -56,6 +60,10 @@ const Filter = () => {
         // eslint-disable-next-line
     }, [url])
 
+    useEffect(() => {
+        s();
+        // eslint-disable-next-line
+    }, [query])
 
     return (
         <>
